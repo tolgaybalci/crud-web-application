@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+</head>
+<body>
+<div>
+    <form method="post" th:action="@{/departments/new}" th:object="${department}">
+        <label for="name">Name</label>
+        <input type="text" id="name" th:field="*{name}"/>
+
+    <button type="submit">Create</button>
+
+    </form>
+
+</div>
+</body>
+</html>

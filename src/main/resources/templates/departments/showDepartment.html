@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+</head>
+<body>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:object="${department}">
+                <td th:text="*{id}"></td>
+                <td th:text="*{name}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

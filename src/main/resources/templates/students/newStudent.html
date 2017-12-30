@@ -1,0 +1,29 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+</head>
+<body>
+<div>
+    <form method="post" th:action="@{/students/new}" th:object="${student}">
+
+        <label for="name">Name</label>
+        <input type="text" id="name" th:field="*{name}"/>
+
+        <label for="number">Number</label>
+        <input type="text" id="number" th:field="*{number}"/>
+
+        <label for="department">Student Department</label>
+        <select id="department" th:field="*{department}">
+            <option value="">Department</option>
+            <option th:each="department:${departments}"
+                    th:value="${department.id}"
+                    th:text="${department.name}">
+            </option>
+        </select>
+        <button type="submit">Create</button>
+
+    </form>
+
+</div>
+</body>
+</html>
